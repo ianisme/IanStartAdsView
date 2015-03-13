@@ -30,6 +30,7 @@
 		3C75BEDF1AB027DE0021094E /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75BECD1AB027DE0021094E /* UIImageView+HighlightedWebCache.m */; };
 		3C75BEE01AB027DE0021094E /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75BECF1AB027DE0021094E /* UIImageView+WebCache.m */; };
 		3C75BEE11AB027DE0021094E /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75BED11AB027DE0021094E /* UIView+WebCacheOperation.m */; };
+		3C75BEE41AB030270021094E /* IanClickImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75BEE31AB030270021094E /* IanClickImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		3C75BECF1AB027DE0021094E /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		3C75BED01AB027DE0021094E /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		3C75BED11AB027DE0021094E /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		3C75BEE21AB030270021094E /* IanClickImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanClickImageView.h; sourceTree = "<group>"; };
+		3C75BEE31AB030270021094E /* IanClickImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanClickImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,8 @@
 			children = (
 				3C75BEAB1AB0138F0021094E /* IanAdsStartView.h */,
 				3C75BEAC1AB0138F0021094E /* IanAdsStartView.m */,
+				3C75BEE21AB030270021094E /* IanClickImageView.h */,
+				3C75BEE31AB030270021094E /* IanClickImageView.m */,
 			);
 			path = IanAdsStartView;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				3C75BE8D1AB012090021094E /* ViewController.m in Sources */,
 				3C75BED51AB027DE0021094E /* SDWebImageCompat.m in Sources */,
 				3C75BEDC1AB027DE0021094E /* UIImage+GIF.m in Sources */,
+				3C75BEE41AB030270021094E /* IanClickImageView.m in Sources */,
 				3C75BEDA1AB027DE0021094E /* SDWebImagePrefetcher.m in Sources */,
 				3C75BEAD1AB0138F0021094E /* IanAdsStartView.m in Sources */,
 				3C75BE8A1AB012090021094E /* AppDelegate.m in Sources */,
@@ -513,6 +519,7 @@
 				3C75BEA61AB012090021094E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C75BEA71AB012090021094E /* Build configuration list for PBXNativeTarget "IanStartAdsViewTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +528,7 @@
 				3C75BEA91AB012090021094E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
