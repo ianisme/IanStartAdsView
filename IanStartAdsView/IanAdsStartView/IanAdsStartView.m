@@ -8,9 +8,13 @@
 
 #import "IanAdsStartView.h"
 #import "UIImageView+WebCache.h"
+
 @interface IanAdsStartView()
+
 @property (strong, nonatomic) IanClickImageView *bgImageView;
+
 @end
+
 @implementation IanAdsStartView
 
 + (instancetype)startAdsViewWithBgImageUrl:(NSString *)imageUrl
