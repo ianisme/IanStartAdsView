@@ -23,7 +23,7 @@
     [self.window makeKeyAndVisible];
     ViewController *VC = [ViewController new];
     self.window.rootViewController = VC;
-    IanAdsStartView *startView = [IanAdsStartView startAdsViewWithBgImageUrl:@"http://duang.xyz/5.jpg"];
+    IanAdsStartView *startView = [IanAdsStartView startAdsViewWithBgImageUrl:@"http://img.mp.itc.cn/upload/20160818/eae8b81eda4e469db7110f1d612aa321_th.jpg"];
     [startView startAnimationTime:3 WithCompletionBlock:^(IanAdsStartView *startView){
         
 

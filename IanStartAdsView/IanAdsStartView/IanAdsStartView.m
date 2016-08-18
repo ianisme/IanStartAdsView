@@ -7,6 +7,7 @@
 //
 
 #import "IanAdsStartView.h"
+#import "SDWebImageManager.h"
 #import "UIImageView+WebCache.h"
 
 @interface IanAdsStartView()
@@ -31,7 +32,24 @@
         _bgImageView.contentMode = UIViewContentModeScaleAspectFill;
         [_bgImageView addTarget:self action:@selector(_ImageClick:)];
         [self addSubview:_bgImageView];
-        [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"LaunchImage-700-568h"]];
+
+        
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        BOOL cachedBool = [manager cachedImageExistsForURL:[NSURL URLWithString:imageUrl]]; // 将需要缓存的图片加载进来
+        BOOL diskBool = [manager diskImageExistsForURL:[NSURL URLWithString:imageUrl]];
+        if (cachedBool || diskBool) {
+            [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"LaunchImage-700-568h"]];
+        } else {
+
+            self.bgImageView.image = [UIImage imageNamed:@"LaunchImage-700-568h"];
+           [manager downloadImageWithURL:[NSURL URLWithString:imageUrl] options:SDWebImageRefreshCached progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+               
+           } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+               
+           }];
+        }
+        
+        
     }
     return self;
 }
