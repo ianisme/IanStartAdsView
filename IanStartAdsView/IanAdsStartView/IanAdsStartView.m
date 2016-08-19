@@ -13,7 +13,7 @@
 
 @interface IanAdsStartView()
 
-@property (strong, nonatomic) IanClickImageView *bgImageView;
+@property (nonatomic, strong) IanClickImageView *bgImageView;
 @property (nonatomic, strong) UIButton *timeButton;
 @property (nonatomic) BOOL isImageDownloaded;
 @property (nonatomic, copy) void(^imageClickAction)();
