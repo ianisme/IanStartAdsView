@@ -9,16 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "IanClickImageView.h"
 
-typedef void (^AdsStartViewAction)();
-
 @interface IanAdsStartView : UIView
 
-@property (nonatomic, copy) AdsStartViewAction adsStartViewAction; // 点击事件
++ (instancetype)startAdsViewWithBgImageUrl:(NSString *)imageUrl withClickImageAction:(void(^)())action;
 
-+ (instancetype)startAdsViewWithBgImageUrl:(NSString *)imageUrl;
-
-- (void)startAnimationTime:(double)time WithCompletionBlock:(void(^)(IanAdsStartView *ianStartView))completionHandler;// 单位秒（s）
-
-- (void)startAnimationTime:(double)time isDisplayTime:(BOOL)isDisPlay WithCompletionBlock:(void(^)(IanAdsStartView *ianStartView))completionHandler; // 是否显示时间
+- (void)startAnimationTime:(NSUInteger)time WithCompletionBlock:(void(^)(IanAdsStartView *ianStartView))completionHandler;
 
 @end

@@ -23,20 +23,17 @@
     [self.window makeKeyAndVisible];
     ViewController *VC = [ViewController new];
     self.window.rootViewController = VC;
-    IanAdsStartView *startView = [IanAdsStartView startAdsViewWithBgImageUrl:@"http://img.mp.itc.cn/upload/20160818/eae8b81eda4e469db7110f1d612aa321_th.jpg"];
-    [startView startAnimationTime:3 WithCompletionBlock:^(IanAdsStartView *startView){
-        
+    
+    IanAdsStartView *startView = [IanAdsStartView startAdsViewWithBgImageUrl:@"http://image.tianjimedia.com/uploadImages/2011/364/5NSR6J1090V1.jpg" withClickImageAction:^{
+        NSLog(@"测试");
+    }];
 
+    [startView startAnimationTime:3 WithCompletionBlock:^(IanAdsStartView *startView){
     
     }];
     
-    startView.adsStartViewAction = ^{
-    
-        NSLog(@"测试测试");
-    };
-    
 
-    
+   
     return YES;
 }
 
