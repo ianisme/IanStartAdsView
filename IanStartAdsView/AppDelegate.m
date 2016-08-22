@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "IanAdsStartView.h"
+#import "IANWebViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -22,10 +23,13 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     ViewController *VC = [ViewController new];
-    self.window.rootViewController = VC;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:VC];
+    self.window.rootViewController = nav;
     
-    IanAdsStartView *startView = [IanAdsStartView startAdsViewWithBgImageUrl:@"http://image.tianjimedia.com/uploadImages/2011/364/5NSR6J1090V1.jpg" withClickImageAction:^{
-        NSLog(@"测试");
+    IanAdsStartView *startView = [IanAdsStartView startAdsViewWithBgImageUrl:@"http://b.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=ca5abb5b7bf0f736ccf344536b3cd87c/29381f30e924b899c83ff41c6d061d950a7bf697.jpg" withClickImageAction:^{
+        IANWebViewController *VC = [IANWebViewController new];
+        VC.title = @"这可能是一个广告页面";
+        [(UINavigationController *)self.window.rootViewController pushViewController:VC animated:YES];
     }];
 
     [startView startAnimationTime:3 WithCompletionBlock:^(IanAdsStartView *startView){

@@ -17,6 +17,7 @@
 		3C75BEAF1AB0165E0021094E /* startImage@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C75BEAE1AB0165E0021094E /* startImage@2x.jpg */; };
 		3C75BEE41AB030270021094E /* IanClickImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75BEE31AB030270021094E /* IanClickImageView.m */; };
 		3C8CD55C1D66B59E00F3901F /* GetLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CD55B1D66B59E00F3901F /* GetLaunchImage.m */; };
+		3CCD3C821D6A9BE8004E7D94 /* IANWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD3C811D6A9BE8004E7D94 /* IANWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		3C75BEE31AB030270021094E /* IanClickImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanClickImageView.m; sourceTree = "<group>"; };
 		3C8CD55A1D66B59E00F3901F /* GetLaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLaunchImage.h; sourceTree = "<group>"; };
 		3C8CD55B1D66B59E00F3901F /* GetLaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLaunchImage.m; sourceTree = "<group>"; };
+		3CCD3C801D6A9BE8004E7D94 /* IANWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IANWebViewController.h; sourceTree = "<group>"; };
+		3CCD3C811D6A9BE8004E7D94 /* IANWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IANWebViewController.m; sourceTree = "<group>"; };
 		60E8988BC380F5FA94268318 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		862D3204194C25BA2B0ED305 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B500D1111E3F97E074EB7EE4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +110,8 @@
 				3C75BE891AB012090021094E /* AppDelegate.m */,
 				3C75BE8B1AB012090021094E /* ViewController.h */,
 				3C75BE8C1AB012090021094E /* ViewController.m */,
+				3CCD3C801D6A9BE8004E7D94 /* IANWebViewController.h */,
+				3CCD3C811D6A9BE8004E7D94 /* IANWebViewController.m */,
 				3C75BEAE1AB0165E0021094E /* startImage@2x.jpg */,
 				3C75BEAA1AB013730021094E /* IanAdsStartView */,
 				3C75BE911AB012090021094E /* Images.xcassets */,
@@ -319,6 +324,7 @@
 				3C8CD55C1D66B59E00F3901F /* GetLaunchImage.m in Sources */,
 				3C75BE8A1AB012090021094E /* AppDelegate.m in Sources */,
 				3C75BE871AB012090021094E /* main.m in Sources */,
+				3CCD3C821D6A9BE8004E7D94 /* IANWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,7 +38,7 @@
         
         _bgImageView = [[IanClickImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         _bgImageView.alpha = 0.0;
-        _bgImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _bgImageView.contentMode = UIViewContentModeScaleToFill;
         [_bgImageView addTarget:self action:@selector(_ImageClick:)];
         [self addSubview:_bgImageView];
         
@@ -50,14 +50,17 @@
         [_timeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_timeButton addTarget:self action:@selector(jumpClick:) forControlEvents:UIControlEventTouchUpInside];
         [_bgImageView addSubview:_timeButton];
+
         
         SDWebImageManager *manager = [SDWebImageManager sharedManager];
         BOOL cachedBool = [manager cachedImageExistsForURL:[NSURL URLWithString:imageUrl]]; // 将需要缓存的图片加载进来
         BOOL diskBool = [manager diskImageExistsForURL:[NSURL URLWithString:imageUrl]];
         if (cachedBool || diskBool) {
+            _timeButton.hidden = NO;
             [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[GetLaunchImage getTheLaunchImage]];
             _isImageDownloaded = YES;
         } else {
+            _timeButton.hidden = YES;
             self.bgImageView.image = [GetLaunchImage getTheLaunchImage];
             [manager downloadImageWithURL:[NSURL URLWithString:imageUrl] options:SDWebImageRefreshCached progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                 
@@ -113,7 +116,6 @@
     _bgImageView.alpha = 1.0;
     
     [_timeButton setTitle:[NSString stringWithFormat:@"跳过%zd",_timeNum] forState:UIControlStateNormal];
-    _timeNum -- ;
     _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
     
 }
@@ -125,6 +127,7 @@
 {
     if (self.imageClickAction && _isImageDownloaded) {
         self.imageClickAction();
+        [self removeMyAdsView];
     }
 }
 
@@ -141,10 +144,7 @@
     }
     _timeNum --;
     if (_isImageDownloaded) {
-        _timeButton.hidden = NO;
         [_timeButton setTitle:[NSString stringWithFormat:@"跳过%zd",_timeNum] forState:UIControlStateNormal];
-    } else {
-        _timeButton.hidden = YES;
     }
 }
 
