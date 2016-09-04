@@ -10,4 +10,4 @@
 - 3.可以设置跳过时间
 
 ### 效果演示：
-<img src="http://785j3g.com1.z0.glb.clouddn.com/IanStartAdsView.gif"  alt="效果展示by ian" height="568" width="320" />
+<img src="https://github.com/ianisme/IanStartAdsView/blob/master/IanStartAdsView.gif?raw=true"  alt="效果展示by ian" height="568" width="320" />
