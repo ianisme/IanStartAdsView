@@ -13,6 +13,7 @@
 
 @interface IanAdsStartView()
 
+@property (nonatomic, strong) UIImageView *bgImageViewDefault;
 @property (nonatomic, strong) IanClickImageView *bgImageView;
 @property (nonatomic, strong) UIButton *timeButton;
 @property (nonatomic) BOOL isImageDownloaded;
@@ -35,6 +36,11 @@
 
         _isImageDownloaded = NO;
         _imageClickAction = action;
+        
+        _bgImageViewDefault = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _bgImageViewDefault.contentMode = UIViewContentModeScaleToFill;
+        [self addSubview:_bgImageViewDefault];
+        _bgImageViewDefault.image = [GetLaunchImage getTheLaunchImage];
         
         _bgImageView = [[IanClickImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         _bgImageView.alpha = 0.0;
@@ -113,13 +119,32 @@
     
     [[UIApplication sharedApplication].keyWindow addSubview:self];
     [[UIApplication sharedApplication].keyWindow bringSubviewToFront:self];
-    _bgImageView.alpha = 1.0;
+    [UIView animateWithDuration:0.5 animations:^{
+        _bgImageView.alpha = 1;
+    }];
     
     [_timeButton setTitle:[NSString stringWithFormat:@"跳过%zd",_timeNum] forState:UIControlStateNormal];
     _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
     
 }
 
++ (void)downloadStartImage:(NSString *)imageUrl
+{
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    BOOL cachedBool = [manager cachedImageExistsForURL:[NSURL URLWithString:imageUrl]];
+    BOOL diskBool = [manager diskImageExistsForURL:[NSURL URLWithString:imageUrl]];
+    if (cachedBool || diskBool) {
+    } else {
+        
+        [manager downloadImageWithURL:[NSURL URLWithString:imageUrl] options:SDWebImageRefreshCached progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+            
+        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            
+        }];
+        
+    }
+    
+}
 
 #pragma mark - action method
 

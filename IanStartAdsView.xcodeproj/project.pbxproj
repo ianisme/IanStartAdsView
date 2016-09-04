@@ -14,7 +14,6 @@
 		3C75BE921AB012090021094E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C75BE911AB012090021094E /* Images.xcassets */; };
 		3C75BEA11AB012090021094E /* IanStartAdsViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75BEA01AB012090021094E /* IanStartAdsViewTests.m */; };
 		3C75BEAD1AB0138F0021094E /* IanAdsStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75BEAC1AB0138F0021094E /* IanAdsStartView.m */; };
-		3C75BEAF1AB0165E0021094E /* startImage@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C75BEAE1AB0165E0021094E /* startImage@2x.jpg */; };
 		3C75BEE41AB030270021094E /* IanClickImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75BEE31AB030270021094E /* IanClickImageView.m */; };
 		3C8CD55C1D66B59E00F3901F /* GetLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CD55B1D66B59E00F3901F /* GetLaunchImage.m */; };
 		3CCD3C821D6A9BE8004E7D94 /* IANWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD3C811D6A9BE8004E7D94 /* IANWebViewController.m */; };
@@ -44,7 +43,6 @@
 		3C75BEA01AB012090021094E /* IanStartAdsViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IanStartAdsViewTests.m; sourceTree = "<group>"; };
 		3C75BEAB1AB0138F0021094E /* IanAdsStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanAdsStartView.h; sourceTree = "<group>"; };
 		3C75BEAC1AB0138F0021094E /* IanAdsStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanAdsStartView.m; sourceTree = "<group>"; };
-		3C75BEAE1AB0165E0021094E /* startImage@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "startImage@2x.jpg"; sourceTree = "<group>"; };
 		3C75BEE21AB030270021094E /* IanClickImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanClickImageView.h; sourceTree = "<group>"; };
 		3C75BEE31AB030270021094E /* IanClickImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanClickImageView.m; sourceTree = "<group>"; };
 		3C8CD55A1D66B59E00F3901F /* GetLaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLaunchImage.h; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				3C75BE8C1AB012090021094E /* ViewController.m */,
 				3CCD3C801D6A9BE8004E7D94 /* IANWebViewController.h */,
 				3CCD3C811D6A9BE8004E7D94 /* IANWebViewController.m */,
-				3C75BEAE1AB0165E0021094E /* startImage@2x.jpg */,
 				3C75BEAA1AB013730021094E /* IanAdsStartView */,
 				3C75BE911AB012090021094E /* Images.xcassets */,
 				3C75BE841AB012090021094E /* Supporting Files */,
@@ -252,7 +249,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C75BE921AB012090021094E /* Images.xcassets in Resources */,
-				3C75BEAF1AB0165E0021094E /* startImage@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

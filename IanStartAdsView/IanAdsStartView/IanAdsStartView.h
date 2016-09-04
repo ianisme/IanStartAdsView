@@ -15,4 +15,6 @@
 
 - (void)startAnimationTime:(NSUInteger)time WithCompletionBlock:(void(^)(IanAdsStartView *ianStartView))completionHandler;
 
++ (void)downloadStartImage:(NSString *)imageUrl;
+
 @end

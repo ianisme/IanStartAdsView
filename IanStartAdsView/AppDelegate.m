@@ -26,18 +26,26 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:VC];
     self.window.rootViewController = nav;
     
-    IanAdsStartView *startView = [IanAdsStartView startAdsViewWithBgImageUrl:@"http://b.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=ca5abb5b7bf0f736ccf344536b3cd87c/29381f30e924b899c83ff41c6d061d950a7bf697.jpg" withClickImageAction:^{
-        IANWebViewController *VC = [IANWebViewController new];
-        VC.title = @"这可能是一个广告页面";
-        [(UINavigationController *)self.window.rootViewController pushViewController:VC animated:YES];
-    }];
-
-    [startView startAnimationTime:3 WithCompletionBlock:^(IanAdsStartView *startView){
+    NSString *picUrl = @"http://785j3g.com1.z0.glb.clouddn.com/d659db60-f.jpg";
+    NSString *userDefaultKey = @"download_key";
     
-    }];
+    if ([[[NSUserDefaults standardUserDefaults] stringForKey:userDefaultKey] isEqualToString:@"1"]) {
+        IanAdsStartView *startView = [IanAdsStartView startAdsViewWithBgImageUrl:picUrl withClickImageAction:^{
+            IANWebViewController *VC = [IANWebViewController new];
+            VC.title = @"这可能是一个广告页面";
+            [(UINavigationController *)self.window.rootViewController pushViewController:VC animated:YES];
+        }];
+        
+        [startView startAnimationTime:3 WithCompletionBlock:^(IanAdsStartView *startView){
+            NSLog(@"广告结束后，执行事件");
+        }];
+    } else { // 第一次先下载广告
+        [IanAdsStartView downloadStartImage:picUrl];
+        
+        [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:userDefaultKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     
-
-   
     return YES;
 }
 
